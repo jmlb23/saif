@@ -17,7 +17,7 @@ def main():
 
         for index in range(1, len(csv_rows.columns)):
             key_with_lang = csv_rows.iloc[:, [0, index]].copy()
-            with_xml = key_with_lang.apply(lambda x : f'<string value="{x[0]}">{x[1]}</string>', axis=1)
+            with_xml = key_with_lang.apply(lambda x : f'<string name="{x[0]}">{x[1]}</string>', axis=1)
             xml_lines = with_xml.tolist()
             xml_string = "\n".join(xml_lines)
             xml_stirng_root = f"<resources>\n{xml_string}\n</resources>"
