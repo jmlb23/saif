@@ -1,1 +1,1 @@
-# Script to parse excel and output android values
+# Script to parse excel and output android xml string resources
